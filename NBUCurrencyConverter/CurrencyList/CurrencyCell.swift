@@ -8,15 +8,35 @@
 
 import UIKit
 
-class CurrencyCell: UITableViewCell, ReusableView {
+final class CurrencyCell: UITableViewCell, ReusableView {
     
     private lazy var currencyLabel: UILabel = InterfaceFactory.Label.make(fromType: .leftAlignment)
     private lazy var coffLabel: UILabel = InterfaceFactory.Label.make(fromType: .rightAlignment)
     
-    func configure(with currency: String, coff: String) -> Void {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        composeCell()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configure(with currency: String, coff: Double) -> Void {
         
         currencyLabel.text = currency
-        coffLabel.text = coff
+        coffLabel.text = String(coff)
+        
+    }
+    
+    override func prepareForReuse() {
+        
+        currencyLabel.text = ""
+        coffLabel.text = ""
+        
+    }
+    
+    func composeCell() -> Void {
         
         contentView.addSubview(currencyLabel, constraints: [
             currencyLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.UI.insets.left),

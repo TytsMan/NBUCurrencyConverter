@@ -8,7 +8,11 @@
 
 import UIKit
 
-class CurrencyListViewController: UIViewController {
+final class CurrencyListViewController: UIViewController {
+
+    var networkManager: NetworkManager = NetworkManager()
+    
+    private var list: [Currency] = []
 
     private lazy var converterButton = InterfaceFactory.Button.make(fromType: .defalut(title: Constants.UI.CurrencyList.ExchangeButton.kTitle, height: Constants.UI.CurrencyList.ExchangeButton.height))
     private lazy var currenciesTableView = InterfaceFactory.TableView.make(fromType: .defalut(delegate: self, dataSource: self))
@@ -19,14 +23,16 @@ class CurrencyListViewController: UIViewController {
         title = Constants.UI.CurrencyList.kTitle
         
         configure()
+        getData()
     }
     
     // MARK: - Setup view
-    func configure() -> Void {
+    private func configure() -> Void {
         
         view.backgroundColor = Constants.UI.CurrencyList.kBackgroundColor
         
         currenciesTableView.register(CurrencyCell.self)
+        converterButton.addTarget(self, action: #selector(exchangeButtonAction), for: .touchUpInside)
         
         view.addSubview(converterButton, constraints: [
             converterButton.heightAnchor.constraint(equalToConstant: Constants.UI.CurrencyList.ExchangeButton.height),
@@ -39,12 +45,34 @@ class CurrencyListViewController: UIViewController {
             currenciesTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             currenciesTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             currenciesTableView.bottomAnchor.constraint(equalTo: converterButton.topAnchor, constant: -Constants.UI.insets.top)])
-
-        
         
     }
     
-    @objc private func exchangeButtonPressed(sender: UIButton) -> Void {
+    private func getData() -> Void {
+        networkManager.getCurrentCourses { [weak self] (currenciesTDO, error) in
+            
+            if let error = error {
+                print(error)
+                print((error as? NetworkResponse)?.rawValue)
+                return
+            }
+            
+            if let currenciesTDO = currenciesTDO {
+                
+                let currencies = currenciesTDO.compactMap { $0.toModel() }
+                
+                self?.list = currencies
+                
+                DispatchQueue.main.async {
+                    self?.currenciesTableView.reloadData()
+                }
+                
+            }
+            
+        }
+    }
+    
+    @objc private func exchangeButtonAction(sender: UIButton) -> Void {
         print("tapped")
     }
 
@@ -65,15 +93,15 @@ extension CurrencyListViewController: UITableViewDelegate {
 
 extension CurrencyListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return list.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeue(CurrencyCell.self, for: indexPath)
-        cell.configure(with: "heh", coff: "hah")
+        cell.configure(with: list[indexPath.row].name, coff: list[indexPath.row].rate)
         return cell
         
     }
-
 
 }
