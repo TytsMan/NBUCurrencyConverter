@@ -21,6 +21,19 @@
 		3922B08825A59D2600DC9C46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3922B08625A59D2600DC9C46 /* LaunchScreen.storyboard */; };
 		3922B09325A59D2600DC9C46 /* NBUCurrencyConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3922B09225A59D2600DC9C46 /* NBUCurrencyConverterTests.swift */; };
 		3922B09E25A59D2600DC9C46 /* NBUCurrencyConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3922B09D25A59D2600DC9C46 /* NBUCurrencyConverterUITests.swift */; };
+		39E0AAD325A9D8E6007D4C1D /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AAD225A9D8E6007D4C1D /* ParameterEncoding.swift */; };
+		39E0AAD525A9D8FC007D4C1D /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AAD425A9D8FC007D4C1D /* URLParameterEncoder.swift */; };
+		39E0AAD725A9D90E007D4C1D /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AAD625A9D90E007D4C1D /* JSONParameterEncoder.swift */; };
+		39E0AAD925A9D988007D4C1D /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AAD825A9D988007D4C1D /* EndPointType.swift */; };
+		39E0AADB25A9D99A007D4C1D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AADA25A9D99A007D4C1D /* HTTPMethod.swift */; };
+		39E0AADD25A9D9CD007D4C1D /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AADC25A9D9CD007D4C1D /* HTTPTask.swift */; };
+		39E0AADF25A9DA44007D4C1D /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AADE25A9DA44007D4C1D /* NetworkRouter.swift */; };
+		39E0AAE125A9DA81007D4C1D /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AAE025A9DA81007D4C1D /* HTTPStatusCode.swift */; };
+		39E0AAE325A9DA94007D4C1D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AAE225A9DA94007D4C1D /* NetworkManager.swift */; };
+		39E0AAE625A9DAE6007D4C1D /* CurrencyTDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AAE525A9DAE6007D4C1D /* CurrencyTDO.swift */; };
+		39E0AAE825A9E244007D4C1D /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AAE725A9E244007D4C1D /* Currency.swift */; };
+		39E0AAEC25AA00E1007D4C1D /* NBUAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AAEB25AA00E1007D4C1D /* NBUAPI.swift */; };
+		39E0AAEE25AA045F007D4C1D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AAED25AA045F007D4C1D /* Date+Extension.swift */; };
 		39E49DC925A7EB2B0030765E /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E49DC825A7EB2B0030765E /* CurrencyCell.swift */; };
 		39E49DCB25A7EC8C0030765E /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E49DCA25A7EC8C0030765E /* ReusableView.swift */; };
 		39E49DCD25A7F7D80030765E /* InterfaceFactory+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E49DCC25A7F7D80030765E /* InterfaceFactory+Label.swift */; };
@@ -64,6 +77,19 @@
 		3922B09925A59D2600DC9C46 /* NBUCurrencyConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBUCurrencyConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3922B09D25A59D2600DC9C46 /* NBUCurrencyConverterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBUCurrencyConverterUITests.swift; sourceTree = "<group>"; };
 		3922B09F25A59D2600DC9C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39E0AAD225A9D8E6007D4C1D /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		39E0AAD425A9D8FC007D4C1D /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		39E0AAD625A9D90E007D4C1D /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		39E0AAD825A9D988007D4C1D /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		39E0AADA25A9D99A007D4C1D /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		39E0AADC25A9D9CD007D4C1D /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		39E0AADE25A9DA44007D4C1D /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		39E0AAE025A9DA81007D4C1D /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		39E0AAE225A9DA94007D4C1D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		39E0AAE525A9DAE6007D4C1D /* CurrencyTDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTDO.swift; sourceTree = "<group>"; };
+		39E0AAE725A9E244007D4C1D /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		39E0AAEB25AA00E1007D4C1D /* NBUAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBUAPI.swift; sourceTree = "<group>"; };
+		39E0AAED25AA045F007D4C1D /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		39E49DC825A7EB2B0030765E /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
 		39E49DCA25A7EC8C0030765E /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		39E49DCC25A7F7D80030765E /* InterfaceFactory+Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InterfaceFactory+Label.swift"; sourceTree = "<group>"; };
@@ -128,6 +154,7 @@
 			children = (
 				391EC26D25A7E1C700BDFF48 /* UIView+AddSubview.swift */,
 				39E49DCA25A7EC8C0030765E /* ReusableView.swift */,
+				39E0AAED25AA045F007D4C1D /* Date+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -162,9 +189,11 @@
 				3922B08625A59D2600DC9C46 /* LaunchScreen.storyboard */,
 				3922B08925A59D2600DC9C46 /* Info.plist */,
 				391EC25825A7924B00BDFF48 /* CurrencyList */,
+				39E0AAE425A9DAC2007D4C1D /* Model */,
 				391EC25E25A793F100BDFF48 /* Constants */,
 				391EC26525A7CBF200BDFF48 /* InterfaceFactory */,
 				391EC26B25A7E19E00BDFF48 /* Extensions */,
+				39E0AACD25A9D872007D4C1D /* Networking */,
 			);
 			path = NBUCurrencyConverter;
 			sourceTree = "<group>";
@@ -185,6 +214,64 @@
 				3922B09F25A59D2600DC9C46 /* Info.plist */,
 			);
 			path = NBUCurrencyConverterUITests;
+			sourceTree = "<group>";
+		};
+		39E0AACD25A9D872007D4C1D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				39E0AACE25A9D896007D4C1D /* EndPoint */,
+				39E0AACF25A9D8A5007D4C1D /* Manager */,
+				39E0AAD125A9D8B8007D4C1D /* Service */,
+				39E0AAD025A9D8B1007D4C1D /* Encoding */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		39E0AACE25A9D896007D4C1D /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				39E0AAEB25AA00E1007D4C1D /* NBUAPI.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		39E0AACF25A9D8A5007D4C1D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				39E0AAE225A9DA94007D4C1D /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		39E0AAD025A9D8B1007D4C1D /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				39E0AAD225A9D8E6007D4C1D /* ParameterEncoding.swift */,
+				39E0AAD425A9D8FC007D4C1D /* URLParameterEncoder.swift */,
+				39E0AAD625A9D90E007D4C1D /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		39E0AAD125A9D8B8007D4C1D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				39E0AAD825A9D988007D4C1D /* EndPointType.swift */,
+				39E0AADA25A9D99A007D4C1D /* HTTPMethod.swift */,
+				39E0AADC25A9D9CD007D4C1D /* HTTPTask.swift */,
+				39E0AADE25A9DA44007D4C1D /* NetworkRouter.swift */,
+				39E0AAE025A9DA81007D4C1D /* HTTPStatusCode.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		39E0AAE425A9DAC2007D4C1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39E0AAE525A9DAE6007D4C1D /* CurrencyTDO.swift */,
+				39E0AAE725A9E244007D4C1D /* Currency.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,16 +405,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E0AAEE25AA045F007D4C1D /* Date+Extension.swift in Sources */,
+				39E0AAD925A9D988007D4C1D /* EndPointType.swift in Sources */,
 				39E49DC925A7EB2B0030765E /* CurrencyCell.swift in Sources */,
 				391EC26A25A7CC3000BDFF48 /* InterfaceFactory+UIButton.swift in Sources */,
+				39E0AAE325A9DA94007D4C1D /* NetworkManager.swift in Sources */,
 				3922B08025A59D2500DC9C46 /* ViewController.swift in Sources */,
 				391EC25B25A792C300BDFF48 /* CurrencyListViewController.swift in Sources */,
+				39E0AAE825A9E244007D4C1D /* Currency.swift in Sources */,
+				39E0AAD525A9D8FC007D4C1D /* URLParameterEncoder.swift in Sources */,
 				39E49DCB25A7EC8C0030765E /* ReusableView.swift in Sources */,
 				39E49DCD25A7F7D80030765E /* InterfaceFactory+Label.swift in Sources */,
 				391EC26725A7CC0000BDFF48 /* InterfaceFactory.swift in Sources */,
+				39E0AAD325A9D8E6007D4C1D /* ParameterEncoding.swift in Sources */,
+				39E0AAE125A9DA81007D4C1D /* HTTPStatusCode.swift in Sources */,
 				391EC26E25A7E1C700BDFF48 /* UIView+AddSubview.swift in Sources */,
+				39E0AAD725A9D90E007D4C1D /* JSONParameterEncoder.swift in Sources */,
+				39E0AAE625A9DAE6007D4C1D /* CurrencyTDO.swift in Sources */,
+				39E0AADD25A9D9CD007D4C1D /* HTTPTask.swift in Sources */,
+				39E0AADB25A9D99A007D4C1D /* HTTPMethod.swift in Sources */,
 				3922B07C25A59D2500DC9C46 /* AppDelegate.swift in Sources */,
 				391EC26025A7941400BDFF48 /* Constants.swift in Sources */,
+				39E0AAEC25AA00E1007D4C1D /* NBUAPI.swift in Sources */,
+				39E0AADF25A9DA44007D4C1D /* NetworkRouter.swift in Sources */,
 				391EC27025A7E3D300BDFF48 /* InterfaceFactory+UITableView.swift in Sources */,
 				391EC26425A7943000BDFF48 /* Constants+UI.swift in Sources */,
 			);
