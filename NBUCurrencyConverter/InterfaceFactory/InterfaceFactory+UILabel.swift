@@ -1,5 +1,5 @@
 //
-//  InterfaceFactory+Label.swift
+//  InterfaceFactory+UILabel.swift
 //  NBUCurrencyConverter
 //
 //  Created by Ivan Dekhtiarov on 08.01.2021.

@@ -13,7 +13,7 @@ extension InterfaceFactory {
     struct TableView: InterfaceFactoryFunction {
         
         enum TableViewType {
-            case `defalut`(delegate: UITableViewDelegate, dataSource: UITableViewDataSource)
+            case `defalut`(delegate: UITableViewDelegate?, dataSource: UITableViewDataSource?)
         }
         
         typealias InputType = TableViewType
