@@ -58,9 +58,9 @@ struct NetworkManager {
     
 }
 
-enum Result<String> {
+enum Result<Error> {
     case success
-    case failure(String)
+    case failure(Error)
 }
 
 enum NetworkResponse: String, Error {
