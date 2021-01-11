@@ -36,7 +36,11 @@
 		39E0AAEE25AA045F007D4C1D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AAED25AA045F007D4C1D /* Date+Extension.swift */; };
 		39E49DC925A7EB2B0030765E /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E49DC825A7EB2B0030765E /* CurrencyCell.swift */; };
 		39E49DCB25A7EC8C0030765E /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E49DCA25A7EC8C0030765E /* ReusableView.swift */; };
-		39E49DCD25A7F7D80030765E /* InterfaceFactory+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E49DCC25A7F7D80030765E /* InterfaceFactory+Label.swift */; };
+		39E49DCD25A7F7D80030765E /* InterfaceFactory+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E49DCC25A7F7D80030765E /* InterfaceFactory+UILabel.swift */; };
+		39FABBB825ABB17B00F7F989 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FABBB725ABB17B00F7F989 /* Double+Extension.swift */; };
+		39FE999325AA24A10038F3D1 /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FE999225AA24A10038F3D1 /* ConverterViewController.swift */; };
+		39FE999525AA31340038F3D1 /* InterfaceFactory+UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FE999425AA31340038F3D1 /* InterfaceFactory+UITextView.swift */; };
+		39FE999725AA34330038F3D1 /* InterfaceFactory+UIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FE999625AA34330038F3D1 /* InterfaceFactory+UIPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +96,11 @@
 		39E0AAED25AA045F007D4C1D /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		39E49DC825A7EB2B0030765E /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
 		39E49DCA25A7EC8C0030765E /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
-		39E49DCC25A7F7D80030765E /* InterfaceFactory+Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InterfaceFactory+Label.swift"; sourceTree = "<group>"; };
+		39E49DCC25A7F7D80030765E /* InterfaceFactory+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InterfaceFactory+UILabel.swift"; sourceTree = "<group>"; };
+		39FABBB725ABB17B00F7F989 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		39FE999225AA24A10038F3D1 /* ConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
+		39FE999425AA31340038F3D1 /* InterfaceFactory+UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InterfaceFactory+UITextView.swift"; sourceTree = "<group>"; };
+		39FE999625AA34330038F3D1 /* InterfaceFactory+UIPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InterfaceFactory+UIPickerView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +151,10 @@
 			children = (
 				391EC26625A7CC0000BDFF48 /* InterfaceFactory.swift */,
 				391EC26925A7CC3000BDFF48 /* InterfaceFactory+UIButton.swift */,
-				39E49DCC25A7F7D80030765E /* InterfaceFactory+Label.swift */,
+				39E49DCC25A7F7D80030765E /* InterfaceFactory+UILabel.swift */,
 				391EC26F25A7E3D300BDFF48 /* InterfaceFactory+UITableView.swift */,
+				39FE999425AA31340038F3D1 /* InterfaceFactory+UITextView.swift */,
+				39FE999625AA34330038F3D1 /* InterfaceFactory+UIPickerView.swift */,
 			);
 			path = InterfaceFactory;
 			sourceTree = "<group>";
@@ -155,6 +165,7 @@
 				391EC26D25A7E1C700BDFF48 /* UIView+AddSubview.swift */,
 				39E49DCA25A7EC8C0030765E /* ReusableView.swift */,
 				39E0AAED25AA045F007D4C1D /* Date+Extension.swift */,
+				39FABBB725ABB17B00F7F989 /* Double+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,6 +200,7 @@
 				3922B08625A59D2600DC9C46 /* LaunchScreen.storyboard */,
 				3922B08925A59D2600DC9C46 /* Info.plist */,
 				391EC25825A7924B00BDFF48 /* CurrencyList */,
+				39FE999125AA24650038F3D1 /* Converter */,
 				39E0AAE425A9DAC2007D4C1D /* Model */,
 				391EC25E25A793F100BDFF48 /* Constants */,
 				391EC26525A7CBF200BDFF48 /* InterfaceFactory */,
@@ -272,6 +284,14 @@
 				39E0AAE725A9E244007D4C1D /* Currency.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		39FE999125AA24650038F3D1 /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				39FE999225AA24A10038F3D1 /* ConverterViewController.swift */,
+			);
+			path = Converter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,7 +426,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				39E0AAEE25AA045F007D4C1D /* Date+Extension.swift in Sources */,
+				39FE999725AA34330038F3D1 /* InterfaceFactory+UIPickerView.swift in Sources */,
 				39E0AAD925A9D988007D4C1D /* EndPointType.swift in Sources */,
+				39FE999525AA31340038F3D1 /* InterfaceFactory+UITextView.swift in Sources */,
 				39E49DC925A7EB2B0030765E /* CurrencyCell.swift in Sources */,
 				391EC26A25A7CC3000BDFF48 /* InterfaceFactory+UIButton.swift in Sources */,
 				39E0AAE325A9DA94007D4C1D /* NetworkManager.swift in Sources */,
@@ -415,7 +437,7 @@
 				39E0AAE825A9E244007D4C1D /* Currency.swift in Sources */,
 				39E0AAD525A9D8FC007D4C1D /* URLParameterEncoder.swift in Sources */,
 				39E49DCB25A7EC8C0030765E /* ReusableView.swift in Sources */,
-				39E49DCD25A7F7D80030765E /* InterfaceFactory+Label.swift in Sources */,
+				39E49DCD25A7F7D80030765E /* InterfaceFactory+UILabel.swift in Sources */,
 				391EC26725A7CC0000BDFF48 /* InterfaceFactory.swift in Sources */,
 				39E0AAD325A9D8E6007D4C1D /* ParameterEncoding.swift in Sources */,
 				39E0AAE125A9DA81007D4C1D /* HTTPStatusCode.swift in Sources */,
@@ -423,9 +445,11 @@
 				39E0AAD725A9D90E007D4C1D /* JSONParameterEncoder.swift in Sources */,
 				39E0AAE625A9DAE6007D4C1D /* CurrencyTDO.swift in Sources */,
 				39E0AADD25A9D9CD007D4C1D /* HTTPTask.swift in Sources */,
+				39FE999325AA24A10038F3D1 /* ConverterViewController.swift in Sources */,
 				39E0AADB25A9D99A007D4C1D /* HTTPMethod.swift in Sources */,
 				3922B07C25A59D2500DC9C46 /* AppDelegate.swift in Sources */,
 				391EC26025A7941400BDFF48 /* Constants.swift in Sources */,
+				39FABBB825ABB17B00F7F989 /* Double+Extension.swift in Sources */,
 				39E0AAEC25AA00E1007D4C1D /* NBUAPI.swift in Sources */,
 				39E0AADF25A9DA44007D4C1D /* NetworkRouter.swift in Sources */,
 				391EC27025A7E3D300BDFF48 /* InterfaceFactory+UITableView.swift in Sources */,
