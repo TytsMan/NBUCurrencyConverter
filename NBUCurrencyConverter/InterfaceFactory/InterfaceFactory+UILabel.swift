@@ -14,6 +14,7 @@ extension InterfaceFactory {
         
         enum LabelType {
             case `defalut`
+            case footnote
             case title
             case leftAlignment
             case rightAlignment
@@ -28,9 +29,16 @@ extension InterfaceFactory {
             switch type {
             case .defalut:
                 
+                label.font = .preferredFont(forTextStyle: .body)
+                label.textColor = Constants.UI.CurrencyList.CurrencyCell.kTextColor
+                label.textAlignment = .center
+            
+            case .footnote:
+                
                 label.font = .preferredFont(forTextStyle: .footnote)
                 label.textColor = Constants.UI.CurrencyList.CurrencyCell.kTextColor
                 label.textAlignment = .center
+                label.textColor = .gray
                 
             case .title:
                 
