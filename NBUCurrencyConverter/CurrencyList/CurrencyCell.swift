@@ -10,7 +10,8 @@ import UIKit
 
 final class CurrencyCell: UITableViewCell, ReusableView {
     
-    private lazy var currencyLabel: UILabel = InterfaceFactory.Label.make(fromType: .leftAlignment)
+    private lazy var currencyNameLabel: UILabel = InterfaceFactory.Label.make(fromType: .defalut)
+    private lazy var currencyDecriptionLabel: UILabel = InterfaceFactory.Label.make(fromType: .footnote)
     private lazy var coffLabel: UILabel = InterfaceFactory.Label.make(fromType: .rightAlignment)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -22,35 +23,46 @@ final class CurrencyCell: UITableViewCell, ReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with currency: String, coff: Double) -> Void {
+    func configure(with currency: Currency) -> Void {
         
-        currencyLabel.text = currency
-        coffLabel.text = String(coff)
+        currencyNameLabel.text = "\(currency.name)"//" (\(currency.description))"
+        currencyDecriptionLabel.text = currency.description
+        coffLabel.text = String(currency.rate)
         
     }
     
     override func prepareForReuse() {
         
-        currencyLabel.text = ""
+        currencyNameLabel.text = ""
+        currencyDecriptionLabel.text = ""
         coffLabel.text = ""
         
     }
     
     func composeCell() -> Void {
         
-        contentView.addSubview(currencyLabel, constraints: [
-            currencyLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.UI.insets.left),
-            currencyLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Constants.UI.insets.top),
-            currencyLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Constants.UI.insets.bottom)
+        let margin = contentView
+        
+        contentView.addSubview(currencyNameLabel, constraints: [
+            currencyNameLabel.leadingAnchor.constraint(equalTo: margin.leadingAnchor, constant: Constants.UI.kInsets.left),
+            currencyNameLabel.topAnchor.constraint(equalTo: margin.topAnchor, constant: Constants.UI.kInsets.top)
+        ])
+        
+        
+        contentView.addSubview(currencyDecriptionLabel, constraints: [
+            currencyNameLabel.bottomAnchor.constraint(equalTo: currencyDecriptionLabel.topAnchor),
+            currencyDecriptionLabel.topAnchor.constraint(equalTo: currencyNameLabel.bottomAnchor),
+            currencyDecriptionLabel.leadingAnchor.constraint(equalTo: margin.leadingAnchor, constant: Constants.UI.kInsets.left),
+            currencyDecriptionLabel.bottomAnchor.constraint(equalTo: margin.bottomAnchor, constant: -Constants.UI.kInsets.bottom)
         ])
         
         addSubview(coffLabel, constraints: [
-            currencyLabel.trailingAnchor.constraint(lessThanOrEqualTo: coffLabel.leadingAnchor),
-            coffLabel.leadingAnchor.constraint(greaterThanOrEqualTo: currencyLabel.trailingAnchor),
-            
-            coffLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Constants.UI.insets.right),
-            coffLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Constants.UI.insets.top),
-            coffLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Constants.UI.insets.bottom)
+            currencyNameLabel.trailingAnchor.constraint(lessThanOrEqualTo: coffLabel.leadingAnchor),
+            coffLabel.leadingAnchor.constraint(greaterThanOrEqualTo: currencyNameLabel.trailingAnchor),
+            currencyDecriptionLabel.trailingAnchor.constraint(lessThanOrEqualTo: coffLabel.leadingAnchor),
+            coffLabel.trailingAnchor.constraint(equalTo: margin.trailingAnchor, constant: -Constants.UI.kInsets.right),
+            coffLabel.topAnchor.constraint(equalTo: margin.topAnchor, constant: Constants.UI.kInsets.top),
+            coffLabel.bottomAnchor.constraint(equalTo: margin.bottomAnchor, constant: -Constants.UI.kInsets.bottom)
         ])
         
     }
