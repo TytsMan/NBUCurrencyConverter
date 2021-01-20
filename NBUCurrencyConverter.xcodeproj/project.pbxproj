@@ -83,6 +83,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3905E42A25B89CDC00A13CD1 /* ProjectFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3922B07B25A59D2500DC9C46 /* AppDelegate.swift */,
+				3922B08425A59D2600DC9C46 /* Assets.xcassets */,
+				3922B08625A59D2600DC9C46 /* LaunchScreen.storyboard */,
+				3922B08925A59D2600DC9C46 /* Info.plist */,
+			);
+			name = ProjectFiles;
+			sourceTree = "<group>";
+		};
 		391EC25825A7924B00BDFF48 /* CurrencyList */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,10 +155,7 @@
 		3922B07A25A59D2500DC9C46 /* NBUCurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
-				3922B07B25A59D2500DC9C46 /* AppDelegate.swift */,
-				3922B08425A59D2600DC9C46 /* Assets.xcassets */,
-				3922B08625A59D2600DC9C46 /* LaunchScreen.storyboard */,
-				3922B08925A59D2600DC9C46 /* Info.plist */,
+				3905E42A25B89CDC00A13CD1 /* ProjectFiles */,
 				391EC25825A7924B00BDFF48 /* CurrencyList */,
 				39FE999125AA24650038F3D1 /* Converter */,
 				39E0AAE425A9DAC2007D4C1D /* Model */,
