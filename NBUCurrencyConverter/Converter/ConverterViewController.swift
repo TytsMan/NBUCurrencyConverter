@@ -9,9 +9,7 @@
 import UIKit
 
 final class ConverterViewController: UIViewController {
-    
-    private typealias generalData = (moneyfirstCurrency: Double, moneySecondCurrency: Double)
-    
+        
     private enum ConverterViewActionType {
         case newFirstCurrency(value: Currency)
         case newSecondCurrency(value: Currency)
@@ -38,7 +36,7 @@ final class ConverterViewController: UIViewController {
             secondCurrencyLabel.text = secondCurreny.name
         }
     }
-    private var converdedMoney: generalData = (1,1) {
+    private var converdedMoney: (moneyfirstCurrency: Double, moneySecondCurrency: Double) = (1,1) {
         didSet {
             converdedMoney = (converdedMoney.moneyfirstCurrency.roundToDecimal(2),
                               converdedMoney.moneySecondCurrency.roundToDecimal(2))
