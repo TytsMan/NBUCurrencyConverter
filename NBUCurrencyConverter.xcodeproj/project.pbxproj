@@ -28,7 +28,6 @@
 		39E0AADB25A9D99A007D4C1D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AADA25A9D99A007D4C1D /* HTTPMethod.swift */; };
 		39E0AADD25A9D9CD007D4C1D /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AADC25A9D9CD007D4C1D /* HTTPTask.swift */; };
 		39E0AADF25A9DA44007D4C1D /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AADE25A9DA44007D4C1D /* NetworkRouter.swift */; };
-		39E0AAE125A9DA81007D4C1D /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AAE025A9DA81007D4C1D /* HTTPStatusCode.swift */; };
 		39E0AAE325A9DA94007D4C1D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AAE225A9DA94007D4C1D /* NetworkManager.swift */; };
 		39E0AAE625A9DAE6007D4C1D /* CurrencyTDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AAE525A9DAE6007D4C1D /* CurrencyTDO.swift */; };
 		39E0AAE825A9E244007D4C1D /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E0AAE725A9E244007D4C1D /* Currency.swift */; };
@@ -88,7 +87,6 @@
 		39E0AADA25A9D99A007D4C1D /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		39E0AADC25A9D9CD007D4C1D /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		39E0AADE25A9DA44007D4C1D /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
-		39E0AAE025A9DA81007D4C1D /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		39E0AAE225A9DA94007D4C1D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		39E0AAE525A9DAE6007D4C1D /* CurrencyTDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTDO.swift; sourceTree = "<group>"; };
 		39E0AAE725A9E244007D4C1D /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
@@ -272,7 +270,6 @@
 				39E0AADA25A9D99A007D4C1D /* HTTPMethod.swift */,
 				39E0AADC25A9D9CD007D4C1D /* HTTPTask.swift */,
 				39E0AADE25A9DA44007D4C1D /* NetworkRouter.swift */,
-				39E0AAE025A9DA81007D4C1D /* HTTPStatusCode.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -440,7 +437,6 @@
 				39E49DCD25A7F7D80030765E /* InterfaceFactory+UILabel.swift in Sources */,
 				391EC26725A7CC0000BDFF48 /* InterfaceFactory.swift in Sources */,
 				39E0AAD325A9D8E6007D4C1D /* ParameterEncoding.swift in Sources */,
-				39E0AAE125A9DA81007D4C1D /* HTTPStatusCode.swift in Sources */,
 				391EC26E25A7E1C700BDFF48 /* UIView+AddSubview.swift in Sources */,
 				39E0AAD725A9D90E007D4C1D /* JSONParameterEncoder.swift in Sources */,
 				39E0AAE625A9DAE6007D4C1D /* CurrencyTDO.swift in Sources */,
