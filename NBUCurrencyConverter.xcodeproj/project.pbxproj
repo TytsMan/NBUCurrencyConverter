@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3905E42C25B8A13100A13CD1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3905E42B25B8A13100A13CD1 /* NetworkError.swift */; };
 		391EC25B25A792C300BDFF48 /* CurrencyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391EC25A25A792C300BDFF48 /* CurrencyListViewController.swift */; };
 		391EC26025A7941400BDFF48 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391EC25F25A7941400BDFF48 /* Constants.swift */; };
 		391EC26425A7943000BDFF48 /* Constants+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391EC26325A7943000BDFF48 /* Constants+UI.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3905E42B25B8A13100A13CD1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		391EC25A25A792C300BDFF48 /* CurrencyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewController.swift; sourceTree = "<group>"; };
 		391EC25F25A7941400BDFF48 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		391EC26325A7943000BDFF48 /* Constants+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+UI.swift"; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				39E0AADA25A9D99A007D4C1D /* HTTPMethod.swift */,
 				39E0AADC25A9D9CD007D4C1D /* HTTPTask.swift */,
 				39E0AADE25A9DA44007D4C1D /* NetworkRouter.swift */,
+				3905E42B25B8A13100A13CD1 /* NetworkError.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39E0AAEE25AA045F007D4C1D /* Date+Extension.swift in Sources */,
+				3905E42C25B8A13100A13CD1 /* NetworkError.swift in Sources */,
 				39FE999725AA34330038F3D1 /* InterfaceFactory+UIPickerView.swift in Sources */,
 				39E0AAD925A9D988007D4C1D /* EndPointType.swift in Sources */,
 				39FE999525AA31340038F3D1 /* InterfaceFactory+UITextView.swift in Sources */,
