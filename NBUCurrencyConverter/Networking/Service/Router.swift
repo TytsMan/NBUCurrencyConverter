@@ -1,5 +1,5 @@
 //
-//  NetworkRouter.swift
+//  Router.swift
 //  NBUCurrencyConverter
 //
 //  Created by Ivan Dekhtiarov on 09.01.2021.
