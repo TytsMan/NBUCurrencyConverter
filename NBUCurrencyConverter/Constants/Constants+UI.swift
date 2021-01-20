@@ -54,12 +54,7 @@ extension Constants.UI {
         static let kTitle = "Converter"
         static let kBackgroundColor: UIColor = .white
         static let kOriginCurrency = Currency(name: "UAH", description: "gruvnya", rate: 1.0, date: Date())
-        
-        static let kFirstTextViewTag = 1000
-        static let kSecondTextViewTag = 1001
-        
-        static let kFirstPickerViewTag = 1002
-        static let kSecondPickerViewTag = 1003
+
 
         
     }

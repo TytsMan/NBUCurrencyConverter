@@ -90,10 +90,6 @@ final class ConverterViewController: UIViewController {
         view.backgroundColor = Constants.UI.Converter.kBackgroundColor
         firstMoneyTextView.delegate = self
         secondMoneyTextView.delegate = self
-        firstMoneyTextView.tag = Constants.UI.Converter.kFirstTextViewTag
-        secondMoneyTextView.tag = Constants.UI.Converter.kSecondTextViewTag
-        firstPickerView.tag = Constants.UI.Converter.kFirstPickerViewTag
-        secondPickerView.tag = Constants.UI.Converter.kSecondPickerViewTag
         
         let margin = view.safeAreaLayoutGuide
         
@@ -180,11 +176,11 @@ extension ConverterViewController: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        switch pickerView.tag {
-        case Constants.UI.Converter.kFirstPickerViewTag:
+        switch pickerView {
+        case firstPickerView:
             updateView(action: .newFirstCurrency(value: currencies[row]))
             
-        case Constants.UI.Converter.kSecondPickerViewTag:
+        case secondPickerView:
             updateView(action: .newSecondCurrency(value: currencies[row]))
             
         default:
@@ -231,12 +227,12 @@ extension ConverterViewController: UITextViewDelegate {
             let text = textView.text,
             let newMoney = Double(text) else { return }
         
-        switch textView.tag {
+        switch textView {
             
-        case Constants.UI.Converter.kFirstTextViewTag:
+        case firstMoneyTextView:
             updateView(action: .newFirstMoney(value: newMoney))
             
-        case Constants.UI.Converter.kSecondTextViewTag:
+        case secondMoneyTextView:
             updateView(action: .newSecondMoney(value: newMoney))
             
         default:
