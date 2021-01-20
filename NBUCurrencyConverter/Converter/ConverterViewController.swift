@@ -56,22 +56,19 @@ final class ConverterViewController: UIViewController {
     func configure(currencies: [Currency], pickedCurrency: Currency) -> Void {
         
         let uah = Constants.UI.Converter.kOriginCurrency
+       
+        self.firstCurreny = uah
+        self.secondCurreny = pickedCurrency
+            
+        var tempCurrencies = currencies
+        tempCurrencies.append(uah)
+        self.currencies = tempCurrencies.sorted()
         
-        self.currencies = currencies
-        self.currencies.append(uah)
-        self.currencies.sort()
-        
-        firstCurreny = uah
-        if let firstCurrencyIndex = currencies.firstIndex(where: { (val) -> Bool in
-            return val.name == uah.name
-        }) {print(firstCurrencyIndex)
+        if let firstCurrencyIndex = self.currencies.firstIndex(of: self.firstCurreny) {
             firstPickerView.selectRow(firstCurrencyIndex, inComponent: 0, animated: false)
         }
-
-        secondCurreny = pickedCurrency
-        if let secondCurrencyIndex = currencies.firstIndex(where: { (val) -> Bool in
-            return val.name == pickedCurrency.name
-        }) {print(secondCurrencyIndex)
+        
+        if let secondCurrencyIndex = self.currencies.firstIndex(of: self.secondCurreny) {
             secondPickerView.selectRow(secondCurrencyIndex, inComponent: 0, animated: false)
         }
         
@@ -141,14 +138,12 @@ final class ConverterViewController: UIViewController {
         case .newFirstCurrency(let newCurreny):
             
             firstCurreny = newCurreny
-            let convertedMoney = converdedMoney.moneyfirstCurrency / firstCurreny.rate * secondCurreny.rate
-            converdedMoney = (converdedMoney.moneyfirstCurrency, convertedMoney)
+            converdedMoney = (1, firstCurreny == secondCurreny ? 1 : firstCurreny.rate / secondCurreny.rate)
             
         case .newSecondCurrency(let newCurreny):
             
             secondCurreny = newCurreny
-            let convertedMoney = converdedMoney.moneyfirstCurrency / firstCurreny.rate * secondCurreny.rate
-            converdedMoney = (convertedMoney, converdedMoney.moneySecondCurrency)
+            converdedMoney = (firstCurreny == secondCurreny ? 1 : secondCurreny.rate / firstCurreny.rate, 1)
             
         case .newFirstMoney(let newMoney):
             
