@@ -8,6 +8,7 @@
 
 
 public typealias HTTPHeaders = [String:String]
+public typealias Parameters = [String: Any]
 
 public struct HTTPTask {
     let additionalHeaders: HTTPHeaders?
