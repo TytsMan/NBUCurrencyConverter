@@ -6,8 +6,6 @@
 //  Copyright © 2021 Ivan Dekhtiarov. All rights reserved.
 //
 
-// Inspired by https://github.com/svenbacia/Utilities/blob/71353151399b82868f426cf8e5e9cea31fd8b210/Utilities/Sources/UIKit/ReusableView.swift
-
 import UIKit
 
 // MARK: - ReusableView
@@ -19,7 +17,7 @@ public protocol ReusableView: AnyObject {
 }
 
 public extension ReusableView where Self: UIView {
-    public static var reuseIdentifier: String {
+    static var reuseIdentifier: String {
         return String(describing: self)
     }
 }
@@ -31,7 +29,7 @@ public extension UITableView {
     /// Register a class for use in creating new table view cells.
     ///
     /// - Parameter cell: The type of class which should be registered.
-    public func register<Cell>(_ cell: Cell.Type) where Cell: ReusableView & UITableViewCell {
+    func register<Cell>(_ cell: Cell.Type) where Cell: ReusableView & UITableViewCell {
         self.register(cell, forCellReuseIdentifier: cell.reuseIdentifier)
     }
     
@@ -39,7 +37,7 @@ public extension UITableView {
     ///
     /// - Parameters:
     ///   - view: The class to use for the header/footer view.
-    public func register<HeaderFooter>(_ headerFooter: HeaderFooter.Type) where HeaderFooter: ReusableView & UITableViewHeaderFooterView {
+    func register<HeaderFooter>(_ headerFooter: HeaderFooter.Type) where HeaderFooter: ReusableView & UITableViewHeaderFooterView {
         self.register(headerFooter.self, forHeaderFooterViewReuseIdentifier: headerFooter.reuseIdentifier)
     }
     
@@ -49,7 +47,7 @@ public extension UITableView {
     ///   - cell: The type of class of the cell.
     ///   - indexPath: The index path specifying the location of the cell.
     /// - Returns: A valid table view cell of the given type.
-    public func dequeue<Cell>(_ cell: Cell.Type, for indexPath: IndexPath) -> Cell where Cell: ReusableView & UITableViewCell {
+    func dequeue<Cell>(_ cell: Cell.Type, for indexPath: IndexPath) -> Cell where Cell: ReusableView & UITableViewCell {
         guard let cell = dequeueReusableCell(withIdentifier: cell.reuseIdentifier, for: indexPath) as? Cell else {
             fatalError("Could not dequeue reusable cell with identifier: \(Cell.reuseIdentifier)")
         }
@@ -60,7 +58,7 @@ public extension UITableView {
     ///
     /// - Parameter headerFooter: The class of the header/footer view.
     /// - Returns: A valid table view header footer view of the given type.
-    public func dequeue<HeaderFooter>(_ headerFooter: HeaderFooter.Type) -> HeaderFooter where HeaderFooter: ReusableView & UITableViewHeaderFooterView {
+    func dequeue<HeaderFooter>(_ headerFooter: HeaderFooter.Type) -> HeaderFooter where HeaderFooter: ReusableView & UITableViewHeaderFooterView {
         guard let view = dequeueReusableHeaderFooterView(withIdentifier: headerFooter.reuseIdentifier) as? HeaderFooter else {
             fatalError("Could not dequeue reusable header footer view with identifier: \(headerFooter.reuseIdentifier)")
         }

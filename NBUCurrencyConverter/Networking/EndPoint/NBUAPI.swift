@@ -24,8 +24,6 @@ extension NBUAPI: EndPointType {
         switch self {
         case .nowadaysCourses, .coursesFor(_):
             return "NBUStatService/v1/statdirectory/exchange"
-        default:
-            return ""
         }
     }
     
@@ -35,9 +33,9 @@ extension NBUAPI: EndPointType {
     
     var task: HTTPTask {
         
-        var headers: HTTPHeaders? = nil
+        let headers: HTTPHeaders? = nil
         var urlParams: Parameters? = nil
-        var bodyParams: Parameters? = nil
+        let bodyParams: Parameters? = nil
         
         switch self {
         case .coursesFor(let date):
