@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NetworkManager {
+class NetworkManager {
     
     private let router = Router<NBUAPI>()
     

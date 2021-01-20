@@ -6,7 +6,6 @@
 //  Copyright © 2021 Ivan Dekhtiarov. All rights reserved.
 //
 
-
 public typealias HTTPHeaders = [String:String]
 public typealias Parameters = [String: Any]
 
@@ -15,5 +14,3 @@ public struct HTTPTask {
     let urlParameters: Parameters?
     let bodyParameters: Parameters?
 }
-
-
