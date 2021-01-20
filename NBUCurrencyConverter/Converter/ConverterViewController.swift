@@ -61,9 +61,7 @@ final class ConverterViewController: UIViewController {
         
         self.currencies = currencies
         self.currencies.append(uah)
-        self.currencies.sort { (frs, scd) -> Bool in
-            frs.name < scd.name
-        }
+        self.currencies.sort()
         
         firstCurreny = uah
         if let firstCurrencyIndex = currencies.firstIndex(where: { (val) -> Bool in

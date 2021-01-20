@@ -49,9 +49,7 @@ final class CurrencyListViewController: UIViewController {
                 
                 let currencies = currenciesTDO
                     .compactMap { $0.toModel() }
-                    .sorted { (currnecyLft, currencyRgh) -> Bool in
-                        return currnecyLft.name < currencyRgh.name
-                }
+                    .sorted()
                 
                 self?.list = currencies
                 

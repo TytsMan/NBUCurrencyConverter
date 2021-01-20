@@ -16,3 +16,9 @@ struct Currency {
     let date: Date
     
 }
+
+extension Currency: Comparable {
+    static func < (lhs: Currency, rhs: Currency) -> Bool {
+        return lhs.name < rhs.name
+    }
+}
