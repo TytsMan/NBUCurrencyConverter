@@ -39,10 +39,11 @@ final class CurrencyListViewController: UIViewController {
         networkManager.getCurrentCourses { [weak self] (currenciesTDO, error) in
             
             if let error = error {
-                print(error)
-                print((error as? NetworkResponse)?.rawValue ?? "error: no error")
-            /// TODO: allert error
-                return
+                if let error = error as? NetworkResponse {
+                    print(error.rawValue)
+                } else {
+                    print(error.localizedDescription)
+                }
             }
             
             if let currenciesTDO = currenciesTDO {
